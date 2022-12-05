@@ -4,7 +4,7 @@ html {
   font-family: 'helvetica neue';
   text-align: center;
   font-size: 10px;
-  /* height: 100%; */
+  height: 100%;
 }
 
 body {
@@ -28,14 +28,6 @@ body {
   inset 0 0 0 3px #EFEFEF,
   inset 0 0 10px black,
   0 0 10px rgba(0,0,0,0.2);
-
-  /* display: flex;
-  justify-content: center; 
-  align-items: center;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  flex-wrap: wrap; */
 }
 
 .clock-face {
@@ -44,12 +36,14 @@ body {
   height: 100%;
   transform: translateY(-3px); /*Account for the height of clock hands*/
 }
+
 .hand {
   width: 50%;
   height: 6px;
   background: black;
   position: absolute;
   top: 50%;
-  transform-origin: 100%;
-  transform:rotate(90deg); /*Aligns the hands vertical to begin at 12o'clock position*/
+  transform-origin: 100%; /*The point where the hand/line rotates from: div on x-axis and all the way to the right end point*/
+  transform:rotate(90deg); /*Aligns the hands vertical to begin at 12 o'clock position*/
+  transition: all 0.05s; /*This is the tick around the clock*/
 }
